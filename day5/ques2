@@ -1,0 +1,29 @@
+# Q18: Write a program to Check strong number.
+
+# Take input from the user
+num = int(input("Enter a number: "))
+
+# Keep a backup of the original number for comparison later
+temp = num
+digit_sum = 0
+
+# Loop to extract digits and calculate factorial sum
+while temp > 0:
+    digit = temp % 10  # Get the last digit
+    
+    # Calculate factorial of the digit
+    factorial = 1
+    for i in range(1, digit + 1):
+        factorial *= i
+        
+    # Add the factorial to the total sum
+    digit_sum += factorial
+    
+    # Remove the last digit from temp
+    temp //= 10
+
+# Check if the sum of factorials matches the original number
+if digit_sum == num:
+    print(f"{num} is a Strong Number.")
+else:
+    print(f"{num} is NOT a Strong Number.")
