@@ -1,0 +1,16 @@
+# Q23: Write a program to Count set bits in a number.
+# (A "set bit" means a bit whose value is 1)
+
+num = int(input("Enter an integer: "))
+
+count = 0
+temp = num
+
+while temp > 0:
+    # If the last bit is 1, increment the count
+    if temp % 2 == 1:
+        count = count + 1
+    # Discard the last bit by dividing by 2
+    temp = temp // 2
+
+print("Number of set bits:", count)

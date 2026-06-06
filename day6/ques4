@@ -1,0 +1,23 @@
+# Q24: Write a program to Find x^n without pow().
+
+x = float(input("Enter the base (x): "))
+n = int(input("Enter the power (n): "))
+
+result = 1.0
+
+# Case 1: If power is positive
+if n > 0:
+    for i in range(n):
+        result = result * x
+
+# Case 2: If power is negative
+elif n < 0:
+    # For a negative power, we multiply and then take the reciprocal (1 / result)
+    positive_n = -n
+    for i in range(positive_n):
+        result = result * x
+    result = 1 / result
+
+# Case 3: If power is 0, result remains 1.0 (since anything to the power 0 is 1)
+
+print("Result:", result)

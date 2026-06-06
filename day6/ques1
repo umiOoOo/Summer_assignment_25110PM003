@@ -1,0 +1,18 @@
+# Q21: Write a program to Convert decimal to binary.
+
+decimal_num = int(input("Enter a decimal number: "))
+
+# Handle the specific case if the user enters 0
+if decimal_num == 0:
+    binary_str = "0"
+else:
+    binary_str = ""
+    temp = decimal_num
+    
+    # Keep dividing by 2 and collecting remainders
+    while temp > 0:
+        remainder = temp % 2
+        binary_str = str(remainder) + binary_str  # Put the new bit at the front
+        temp = temp // 2                          # Integer division to reduce the number
+
+print("Binary equivalent:", binary_str)
