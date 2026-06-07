@@ -1,0 +1,16 @@
+# Q27: Write a program to Recursive sum of digits.
+
+def sum_of_digits(n):
+    # Base case: if the number becomes 0
+    if n == 0:
+        return 0
+    # Recursive case: last digit + sum of remaining digits
+    else:
+        return (n % 10) + sum_of_digits(n // 10)
+
+# Taking input from the user
+num = int(input("Enter a number: "))
+
+# Using abs() to handle negative numbers smoothly
+result = sum_of_digits(abs(num))
+print(f"The sum of digits of {num} is {result}")

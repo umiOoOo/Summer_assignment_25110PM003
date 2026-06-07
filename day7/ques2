@@ -1,0 +1,22 @@
+# Q26: Write a program to Recursive Fibonacci.
+
+def fibonacci(n):
+    # Base cases: 0th Fibonacci number is 0, 1st is 1
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    # Recursive case: sum of previous two terms
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+# Taking input for how many terms to print
+terms = int(input("Enter the number of terms: "))
+
+if terms <= 0:
+    print("Please enter a positive integer.")
+else:
+    print("Fibonacci sequence:")
+    for i in range(terms):
+        print(fibonacci(i), end=" ")
+    print()  # For a new line at the end

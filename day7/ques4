@@ -1,0 +1,22 @@
+# Q28: Write a program to Recursive reverse number.
+
+def reverse_number(n, current_rev=0):
+    # Base case: when the number becomes 0, return the accumulated reverse
+    if n == 0:
+        return current_rev
+    # Recursive case: push last digit to reverse, and shift remaining digits
+    else:
+        last_digit = n % 10
+        current_rev = (current_rev * 10) + last_digit
+        return reverse_number(n // 10, current_rev)
+
+# Taking input from the user
+num = int(input("Enter a number: "))
+
+# Handling negative numbers separately to keep the logic clean
+if num < 0:
+    result = -reverse_number(abs(num))
+else:
+    result = reverse_number(num)
+
+print(f"The reversed number is {result}")
