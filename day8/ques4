@@ -1,0 +1,16 @@
+# Q32: Write a program to Print repeated-number pattern.
+rows = 5
+
+# Outer loop
+for i in range(1, rows + 1):
+    # Inner loop prints the current row number 'i', 'i' times
+    for j in range(1, i + 1):
+        print(i, end="")
+    print()
+
+
+
+
+# Alternative elegant solution for Q32 using string multiplication
+for i in range(1, 6):
+    print(str(i) * i)

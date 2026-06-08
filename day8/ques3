@@ -1,0 +1,10 @@
+# Q31: Write a program to Print character triangle.
+rows = 5
+
+# Outer loop
+for i in range(1, rows + 1):
+    # Inner loop to print characters
+    for j in range(0, i):
+        # 65 is ASCII for 'A', adding j changes it to 'B', 'C', etc.
+        print(chr(65 + j), end="")
+    print()
