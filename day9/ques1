@@ -1,0 +1,13 @@
+# Q33: Write a program to Print reverse star pattern.
+# *****
+# ****
+# ***
+# **
+# *
+
+# We start from 5 and go down to 1
+for i in range(5, 0, -1):
+    # Print '*' i times
+    for j in range(i):
+        print("*", end="")
+    print()  # Move to the next line
