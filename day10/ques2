@@ -1,0 +1,17 @@
+# Q38: Write a program to Print reverse pyramid.
+# *********
+#  *******
+#   *****
+#    ***
+#     *
+
+n = 5
+for i in range(n, 0, -1):
+    # Print leading spaces
+    for j in range(n - i):
+        print(" ", end="")
+    # Print stars: (2 * i - 1) stars per row
+    for k in range(2 * i - 1):
+        print("*", end="")
+    # Move to the next line
+    print()
