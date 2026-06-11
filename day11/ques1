@@ -1,0 +1,14 @@
+# Q41: Write a program to Write function to find sum of two numbers.
+
+def find_sum(num1, num2):
+    """This function takes two numbers and returns their sum."""
+    result = num1 + num2
+    return result
+
+# Taking input from the user
+number1 = float(input("Enter first number: "))
+number2 = float(input("Enter second number: "))
+
+# Calling the function and printing the result
+total_sum = find_sum(number1, number2)
+print(f"The sum of {number1} and {number2} is: {total_sum}")

@@ -1,0 +1,23 @@
+# Q43: Write a program to Write function to check prime.
+
+def is_prime(n):
+    """This function checks if a number is prime and returns True or False."""
+    # Numbers less than or equal to 1 are not prime
+    if n <= 1:
+        return False
+    
+    # Check for factors from 2 up to n-1
+    for i in range(2, n):
+        if n % i == 0:
+            return False  # Found a factor, so it's not prime
+            
+    return True  # No factors found, so it is prime
+
+# Taking input from the user
+num = int(input("Enter an integer to check: "))
+
+# Calling the function and checking the result
+if is_prime(num):
+    print(f"{num} is a prime number.")
+else:
+    print(f"{num} is not a prime number.")

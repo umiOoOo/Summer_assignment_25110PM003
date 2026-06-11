@@ -1,0 +1,16 @@
+# Q42: Write a program to Write function to find maximum.
+
+def find_maximum(num1, num2):
+    """This function compares two numbers and returns the larger one."""
+    if num1 > num2:
+        return num1
+    else:
+        return num2
+
+# Taking input from the user
+number1 = float(input("Enter first number: "))
+number2 = float(input("Enter second number: "))
+
+# Calling the function and printing the result
+max_val = find_maximum(number1, number2)
+print(f"The maximum number between {number1} and {number2} is: {max_val}")
