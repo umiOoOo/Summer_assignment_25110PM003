@@ -1,0 +1,21 @@
+# Q45: Write a program to Write function for palindrome.
+
+def is_palindrome(number):
+    # Convert the number to a string to easily check digits
+    num_str = str(number)
+    
+    # Reverse the string using slicing
+    reversed_str = num_str[::-1]
+    
+    # Check if original string and reversed string are the same
+    if num_str == reversed_str:
+        return True
+    else:
+        return False
+
+# Testing the function
+num = int(input("Enter a number to check for Palindrome: "))
+if is_palindrome(num):
+    print(f"{num} is a Palindrome number.")
+else:
+    print(f"{num} is not a Palindrome number.")
